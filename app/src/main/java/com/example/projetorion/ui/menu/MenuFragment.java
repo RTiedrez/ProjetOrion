@@ -15,13 +15,13 @@ import com.example.projetorion.databinding.FragmentMenuBinding;
 
 public class MenuFragment extends Fragment {
 
-    private static final String TAG_DASHBOARD = "DebugDashboardFragment";
+    private static final String TAG_MENU = "DebugMenuFragment";
 
     private FragmentMenuBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        Log.d(TAG_DASHBOARD,"Appel de onCreate dans MenuFragment");
+        Log.d(TAG_MENU,"Appel de onCreate dans MenuFragment");
 
         MenuViewModel menuViewModel =
                 new ViewModelProvider(this).get(MenuViewModel.class);
@@ -36,7 +36,7 @@ public class MenuFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        Log.d(TAG_DASHBOARD,"Appel de onDestroyView dans MenuFragment");
+        Log.d(TAG_MENU,"Appel de onDestroyView dans MenuFragment");
 
         super.onDestroyView();
         binding = null;

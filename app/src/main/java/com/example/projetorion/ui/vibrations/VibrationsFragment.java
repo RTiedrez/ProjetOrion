@@ -15,13 +15,13 @@ import com.example.projetorion.databinding.FragmentVibrationsBinding;
 
 public class VibrationsFragment extends Fragment {
 
-    private static final String TAG_HOME = "DebugHomeFragment";
+    private static final String TAG_VIBRATIONS = "DebugVibrationsFragment";
 
     private FragmentVibrationsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        Log.d(TAG_HOME,"Appel de onCreate dans VibrationsFragment");
+        Log.d(TAG_VIBRATIONS,"Appel de onCreate dans VibrationsFragment");
 
         VibrationsViewModel vibrationsViewModel =
                 new ViewModelProvider(this).get(VibrationsViewModel.class);
@@ -36,7 +36,7 @@ public class VibrationsFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        Log.d(TAG_HOME,"Appel de onDestroyView dans VibrationsFragment");
+        Log.d(TAG_VIBRATIONS,"Appel de onDestroyView dans VibrationsFragment");
 
         super.onDestroyView();
         binding = null;
